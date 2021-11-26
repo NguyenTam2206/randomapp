@@ -270,7 +270,7 @@ export default {
 }
 @media (min-width: 769px) {
   .wrap-random {
-    padding-left: 100px;
+    padding-left: 100px !important;
   }
 }
 @media (max-width: 768px) {
