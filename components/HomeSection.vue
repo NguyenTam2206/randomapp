@@ -121,9 +121,13 @@ export default {
       this.showfake = true;
       let ele = document.getElementById("fakeresult");
       // Animate!
+      let that = this;
       let effect = setInterval(function() {
-        ele.innerHTML =
-          Math.floor(Math.random() * 100) + Math.floor(Math.random() * 100);
+        ele.innerHTML = Math.floor(
+          Math.random() *
+            (Number(that.maxNumber) - Number(that.minNumber) + 1) +
+            Number(that.minNumber)
+        );
       }, 50);
       setTimeout(() => {
         clearInterval(effect);
